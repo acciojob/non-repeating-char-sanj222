@@ -15,7 +15,7 @@ function findFirstNonRepeatingChar() {
   
   for (let char of inputString) {
     if (charCount[char] === 1) {
-      alert(`The first non-repeating character is: ${char}`);
+      alert(char);
       return;
     }
   }
