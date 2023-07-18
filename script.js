@@ -1,27 +1,14 @@
-function findFirstNonRepeatingChar() {
-  const inputString = prompt("Enter a string:");
-
-  const charCount = {};
-
-
-  for (let char of inputString) {
-    if (charCount[char]) {
-      charCount[char]++;
-    } else {
-      charCount[char] = 1;
-    }
-  }
-
-  
-  for (let char of inputString) {
-    if (charCount[char] === 1) {
-      alert(char);
-      return;
-    }
-  }
-
-  alert("No non-repeating character found.");
+let givenString = prompt("Enter a string: ");
+let character = null
+function firstNonRepeatingCharacter(string) {
+	for(let i = 0;i<string.length;i++){
+		if(string.lastIndexOf(string[i])==i && string.indexOf(string[i])==i){
+			 character = string[i];
+			return;
+		}
+	}	
 }
-findFirstNonRepeatingChar();
+firstNonRepeatingCharacter(givenString);
+alert(character);
 
 
